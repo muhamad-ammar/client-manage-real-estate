@@ -1,6 +1,6 @@
 gradle-wrapper.jar
 /.gradle
-.dart_tool/
+.dart_tool/*
 windows/
 build/app/
 /captures/
