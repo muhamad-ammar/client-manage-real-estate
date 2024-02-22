@@ -2,7 +2,7 @@ gradle-wrapper.jar
 /.gradle
 .dart_tool/*
 windows/
-build/app/
+build/
 /captures/
 /gradlew
 /gradlew.bat
