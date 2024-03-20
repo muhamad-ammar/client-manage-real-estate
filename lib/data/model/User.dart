@@ -1,4 +1,3 @@
-
 class User {
   String? name;
   String? id;
@@ -6,16 +5,17 @@ class User {
   String? mobile2;
   String? email;
   String? role;
-  List<String>? assignees;
+  List<Assignee>? assignees;
 
-  User(
-      {this.name,
-        this.id,
-        this.mobile1,
-        this.mobile2,
-        this.email,
-        this.role,
-        this.assignees});
+  User({
+    this.name,
+    this.id,
+    this.mobile1,
+    this.mobile2,
+    this.email,
+    this.role,
+    this.assignees,
+  });
 
   User.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -24,7 +24,7 @@ class User {
     mobile2 = json['mobile2'];
     email = json['email'];
     role = json['role'];
-    assignees = json['assignees'].cast<String>();
+    assignees = (json['assignees'] as List)?.cast<Map<String, dynamic>>()?.map((e) => Assignee.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
@@ -35,7 +35,26 @@ class User {
     data['mobile2'] = this.mobile2;
     data['email'] = this.email;
     data['role'] = this.role;
-    data['assignees'] = this.assignees;
+    data['assignees'] = assignees?.map((e) => e.toJson()).toList();
+    return data;
+  }
+}
+
+class Assignee {
+  String? clientId;
+  String? clientName;
+
+  Assignee({this.clientId, this.clientName});
+
+  Assignee.fromJson(Map<String, dynamic> json) {
+    clientId = json['clientId'];
+    clientName = json['clientName'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['clientId'] = this.clientId;
+    data['clientName'] = this.clientName;
     return data;
   }
 }
