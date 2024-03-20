@@ -4,6 +4,7 @@ import 'package:property_help/Utils/uiUtils.dart';
 
 import '../../Utils/appTheme.dart';
 import '../../data/model/Clients.dart';
+import 'add_a_client_team.dart';
 
 class ClientsList extends StatefulWidget {
   const ClientsList({super.key});
@@ -59,7 +60,9 @@ class _ClientsListState extends State<ClientsList> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,  MaterialPageRoute(builder: (context)=> AddAClientOrTeam()));
+        },
         child: Icon(
           Icons.add,
           size: 25,
