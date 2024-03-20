@@ -1,70 +1,54 @@
 import 'package:property_help/constants/routesNames.dart';
 import 'package:property_help/utils/navigation_utils.dart';
-import 'package:property_help/view/CourseTest.dart';
 import 'package:flutter/material.dart';
-
+import 'package:property_help/view/HomeWidgets/custom_tab_bar.dart';
 import '../Utils/appTheme.dart';
 import '../Utils/app_styles.dart';
-import 'Course.dart';
-import 'CourseTest2.dart';
+import '../data/model/Clients.dart';
+import 'HomeWidgets/custom_clients_list.dart';
 
-class Home extends StatefulWidget {
-  final String title;
-
-  const Home({super.key, required this.title});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeScreenState extends State<HomeScreen> {
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size(0, 80),
-          child: AppBar(
-            centerTitle: true,
-            title: Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Text(
-                  widget.title,
-                  style: const TextStyle(color: AppTheme.backgroundColor),
-                )),
-            backgroundColor: AppTheme.primaryColor,
-          )),
-      body: Container(
-        padding: EdgeInsets.all(10),
-        child: Column(
-          children: [
-            InkWell(
-                splashColor: AppTheme.lightGrayColor,
-                onTap: () {
-                  NavigationUtils.push(context, RoutesName.courseContent);
-                },
-                child: Course()),
-            Insets.gapH20,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                    onTap: () {
-                      NavigationUtils.push(context, RoutesName.testContent);
-                    },
-                    splashColor: AppTheme.lightGrayColor,
-                    child: CourseTest()),
-                InkWell(
-                    onTap: () {
-                      NavigationUtils.push(context, RoutesName.contactUs);
-                    },
-                    splashColor: AppTheme.lightGrayColor,
-                    child: CourseTest2())
-              ],
-            )
-          ],
-        ),
+      child: Scaffold(
+        body: DefaultTabController(
+            initialIndex: 0,
+            length: 3,
+            child: Scaffold(
+              appBar: AppBar(
+                backgroundColor: AppTheme.primaryColor,
+                bottom: getTabBar(),
+              ),
+              body: TabBarView(
+                children: <Widget>[
+                  ClientsList(),
+                  Center(
+                    child: Text("It's rainy here"),
+                  ),
+                  Center(
+                    child: Text("It's sunny here"),
+                  ),
+                ],
+              ),
+            )),
       ),
-    ));
+    );
   }
 }
