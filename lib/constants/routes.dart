@@ -1,26 +1,31 @@
 import 'package:property_help/constants/routesNames.dart';
 import 'package:property_help/view/contact.dart';
+import 'package:property_help/view/register.dart';
 
 import 'package:property_help/view/splash.dart';
 import 'package:flutter/material.dart';
 import '../view/home.dart';
-import '../view/login.dart';
+import '../view/auth/login.dart';
+import '../view/main_screen.dart';
 import '../view/testContent.dart';
-
-
 
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case RoutesName.testContent:
-        return _getRoute(TestContent());
-      case RoutesName.index:
-        return _getRoute( SplashScreen());
-      case RoutesName.signIn:
-        return _getRoute(SignInScreen());
-        case RoutesName.contactUs:
-        return _getRoute(ContactUs());
+    case RoutesName.testContent:
+    return _getRoute(TestContent());
+    case RoutesName.index:
+    return _getRoute( SplashScreen());
+    case RoutesName.signIn:
+    return _getRoute(SignInScreen());
+    case RoutesName.contactUs:
+    return _getRoute(ContactUs());
+    case RoutesName.register:
+    return _getRoute(RegisterScreen());
+    case RoutesName.mainScreen:
+    return _getRoute(const MainScreen());
+
 
 
     // case RoutesName.courseDetail:
@@ -29,17 +34,16 @@ class Routes {
     //   return _getRoute(const EventsListScreen());
     //   case RoutesName.notifications:
     //     return _getRoute(const NotificationsListScreen());
-      case RoutesName.home:
-        return _getRoute(const Home(title: "Crash Course"));
-      default:
-        return _getRoute( SignInScreen());
+    case RoutesName.home:
+    return _getRoute(const HomeScreen());
+    default:
+    return _getRoute( SignInScreen());
     }
   }
 
-  static MaterialPageRoute _getRoute(
-      Widget page, {
-        RouteSettings? settings,
-      }) {
+  static MaterialPageRoute _getRoute(Widget page, {
+    RouteSettings? settings,
+  }) {
     return MaterialPageRoute(
       builder: (ctx) => page,
       settings: settings,
