@@ -25,7 +25,7 @@ class _ViewProfileScreenState extends State<ViewProfileScreen> {
         mobile1: "03226258404",
         email: "ammar@gmail.com",
         role: "Manager",
-        assignees: ["cl000001", "cl000005"]); // Fetch data on initialization
+        assignees: [Assignee(clientName:"ARG Client", clientId: "cl0001" )]); // Fetch data on initialization
   }
 
   @override
