@@ -1,6 +1,5 @@
 import 'package:property_help/constants/routesNames.dart';
 import 'package:property_help/view/contact.dart';
-import 'package:property_help/view/register.dart';
 
 import 'package:property_help/view/splash.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +20,6 @@ class Routes {
     return _getRoute(SignInScreen());
     case RoutesName.contactUs:
     return _getRoute(ContactUs());
-    case RoutesName.register:
-    return _getRoute(RegisterScreen());
     case RoutesName.mainScreen:
     return _getRoute(const MainScreen());
 
