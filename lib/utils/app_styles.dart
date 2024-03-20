@@ -208,6 +208,7 @@ class Textify {
   static final TextStyle hint = GoogleFonts.inter(
     fontSize: 14,
     fontWeight: FontWeight.w500,
+    color: AppTheme.darkGrayColor
   );
   static final TextStyle boldHint = GoogleFonts.inter(
     fontSize: 14,
