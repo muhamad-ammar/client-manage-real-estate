@@ -29,7 +29,8 @@ class CustomTextField extends StatefulWidget {
   final bool showSuffix;
   final bool readOnly;
   final int? maxLength;
-  final int maxLines;
+  final bool? showBorder;
+  final int? maxLines;
   final double borderRadius;
 
   const CustomTextField({
@@ -55,6 +56,7 @@ class CustomTextField extends StatefulWidget {
     this.showSuffix = true,
     this.readOnly = false,
     this.maxLength,
+    this.showBorder = true,
     this.maxLines = 1,
     this.borderRadius = 15,
   }) : super(key: key);
@@ -88,12 +90,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
           autovalidateMode: widget.autoValidateMode,
           decoration: InputFieldUtils.inputDecorator(
             context,
+
             fieldKey: _fieldKey,
             enabled: widget.enabled,
             hint: widget.hint,
             prefix: prefix,
             suffix: suffix,
           ).copyWith(
+            border: widget.showBorder ?? true ? OutlineInputBorder(): InputBorder.none,
             contentPadding: EdgeInsets.fromLTRB(
               prefix == null ? 16 : 0,
               24,
