@@ -45,6 +45,7 @@ dependencies:
   root: ^2.0.4
   url_launcher: ^6.2.2
   flutter_jailbreak_detection: ^1.10.0
+  dropdown_button2: ^2.3.9
 
   flutter:
     sdk: flutter
