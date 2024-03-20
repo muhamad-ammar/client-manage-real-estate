@@ -2,6 +2,7 @@
 import 'package:dio/dio.dart';
 import '../model/auth.dart';
 import 'dio_client.dart';
+import '../../constants/app_constants.dart';
 
 class ApiProvider {
   final DioClient dioClient;
@@ -11,7 +12,7 @@ class ApiProvider {
   Future<AuthResponse> authUser(String? login, String? password ) async {
     try {
       final Response response = await dioClient.post(
-        "user/login",
+        Endpoints.login,
         data: {
           "username": login,
           "password": password,
