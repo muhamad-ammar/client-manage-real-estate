@@ -372,7 +372,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CLXH3E5RD8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "10Pearls University";
+				INFOPLIST_KEY_CFBundleDisplayName = "AZ Client Managment";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,7 +387,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shahzaibcrash.course;
+				PRODUCT_BUNDLE_IDENTIFIER = com.property.help;
 				PRODUCT_NAME = "10Pearls University";
 				PROVISIONING_PROFILE_SPECIFIER = 10PUniversityDevelopmentProfile;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 10PUniversityAppStoreDistributionProfile;
@@ -523,7 +523,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CLXH3E5RD8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "10Pearls University";
+				INFOPLIST_KEY_CFBundleDisplayName = "AZ Client Managment";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -538,7 +538,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shahzaibcrash.course;
+				PRODUCT_BUNDLE_IDENTIFIER = com.property.help;
 				PRODUCT_NAME = "10Pearls University";
 				PROVISIONING_PROFILE_SPECIFIER = 10PUniversityDevelopmentProfile;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 10PUniversityAppStoreDistributionProfile;
@@ -568,7 +568,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CLXH3E5RD8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "10Pearls University";
+				INFOPLIST_KEY_CFBundleDisplayName = "AZ Client Managment";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +583,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shahzaibcrash.course;
+				PRODUCT_BUNDLE_IDENTIFIER = ccom.property.help;
 				PRODUCT_NAME = "10Pearls University";
 				PROVISIONING_PROFILE_SPECIFIER = 10PUniversityDistributionProfile;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 10PUniversityAppStoreDistributionProfile;
