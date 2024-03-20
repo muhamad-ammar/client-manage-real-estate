@@ -6,10 +6,10 @@ import 'app_styles.dart';
 @immutable
 class AppTheme {
   const AppTheme._privateConstructor();
-  static const Color primaryColor = Color(0xFF0045a6);
-  static const Color secondaryColor = Color(0xFFc5d6f4);
-  static const Color accentColor = Color(0xFF0936c3);
-  static const Color darkBlueColor = Color(0xFF022150);
+  static const Color primaryColor = Color(0xFFebbc28);
+  static const Color secondaryColor = Color(0xFFebbc28);
+  static const Color accentColor = Color(0xFF564209);
+  static const Color darkBlueColor = Color(0xFF0F5CD0);
   static const Color secondaryBlueColor = Color(0xFF156cf7);
   static const Color linkColor = Color(0xFF0092ff);
   static const Color lightBlueColor = Color(0xff70b3f4);
@@ -27,12 +27,12 @@ class AppTheme {
   static const Color grayColor = Color(0xFFadadad);
   static const Color lightGrayColor = Color(0xFFececec);
   static const Color darkGrayColor = Color(0xFF6f6f6f);
-  static const Color yellowColor = Color(0xFFf9bc60);
+  static const Color yellowColor = Color(0xfffcf3d5);
   static const Color purpleColor = Color(0xFF8758ff);
   static const Color ratingBarActiveColor = Color(0xFFfaae4b);
   static const Color ratingBarInactiveColor = Color(0xFFdddbd8);
   static const Color shadowColor = Color(0x1e000000);
-  static const Color dividerColor = Color(0xFFf4f4f4);
+  static const Color dividerColor = Color(0xffe7e7e7);
   static const Color backgroundColor = Colors.white;
   static const Color blackColor = Colors.black;
 
