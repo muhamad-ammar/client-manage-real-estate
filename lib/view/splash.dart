@@ -12,6 +12,7 @@ import '../constants/cache_helper.dart';
 import '../constants/preferences.dart';
 import '../constants/routesNames.dart';
 import '../utils/navigation_utils.dart';
+import 'auth/login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -91,15 +92,15 @@ class _SplashScreenState extends State<SplashScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Medical Lab Technologist",
+                    "Property Help - CMS",
                     style: Textify.heading1,
                   ),
                   Insets.gapH10,
                   SizedBox(
                       width: UiUtils.getScreenWidth(context) * 0.8,
                       child: Text(
-                          "Accelerate your preparation for the Medical Lab Technologist test with our crash course, "
-                              "success in diagnostics and laboratory procedures.", style: Textify.hint.copyWith(color: AppTheme.secondaryTextColor, fontSize: 14),))
+                          "Streamline your client world. Organize leads, projects,"
+                              " invoices, & communication in one powerful platform. Cloud-based. Easy. Secure. ", style: Textify.hint.copyWith(color: AppTheme.secondaryTextColor, fontSize: 14),))
                 ],
               )
             ],
@@ -121,7 +122,9 @@ class _SplashScreenState extends State<SplashScreen> {
     NavigationUtils.replace(context, RoutesName.home);
     }
     else{
-      _initNavigation();}
+      _initNavigation();
+      // NavigationUtils.replace(context, RoutesName.signIn);
+    }
   }
 
   Future<void> _initNavigation() async {
@@ -133,6 +136,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _navigateNext() {
     // Duration(seconds: 5);
-    NavigationUtils.replace(context, RoutesName.signIn);
+    NavigationUtils.replace(context, RoutesName.mainScreen);
   }
 }
